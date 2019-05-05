@@ -19,17 +19,17 @@ public class Conta {
 
     private String nome;
 
-    private float valorOriginal;
+    private double valorOriginal;
 
-    private float valorCorrigido;
+    private double valorCorrigido;
 
-    private float quantidadeDiasAtraso;
+    private int quantidadeDiasAtraso;
 
     private LocalDate dataPagamento;
 
     private LocalDate dataVencimento;
 
-    private float percentualMulta;
+    private double percentualMulta;
 
-    private float percentualJurosDia;
+    private double percentualJurosDia;
 }
