@@ -12,6 +12,8 @@ public class ContaService {
 
     private ContaRepository contaRepository;
 
+    private final int pageSize = 10;
+
     public ContaService(ContaRepository contaRepository) {
         this.contaRepository = contaRepository;
     }
@@ -21,7 +23,7 @@ public class ContaService {
     }
 
     public Page<Conta> findAll(int page) {
-        return contaRepository.findAll(PageRequest.of(page, 10));
+        return contaRepository.findAll(PageRequest.of(page, pageSize));
 	}
 
 }
