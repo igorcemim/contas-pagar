@@ -10,6 +10,8 @@ services:
       MYSQL_PASSWORD: contaspagar
       MYSQL_ROOT_PASSWORD: root
   app:
+    depends_on:
+      - db
     image: gradle:5.4.1-jdk8
     ports:
       - 8080:8080
