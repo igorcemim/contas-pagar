@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: contaspagar
+      MYSQL_USER: contaspagar
+      MYSQL_PASSWORD: contaspagar
+      MYSQL_ROOT_PASSWORD: root
+  app:
+    image: gradle:5.4.1-jdk8
+    ports:
+      - 8080:8080
+    links:
+      - db
+    volumes:
+      - "${PWD}/:/project"
+    working_dir: "/project"
+    command: "gradle bootRun"
