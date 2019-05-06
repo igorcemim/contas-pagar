@@ -1,7 +1,9 @@
 package br.com.cemim.contaspagar.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,9 +21,11 @@ public class Conta {
 
     private String nome;
 
-    private double valorOriginal;
+    @Column(precision=15, scale=2)
+    private BigDecimal valorOriginal;
 
-    private double valorCorrigido;
+    @Column(precision=15, scale=2)
+    private BigDecimal valorCorrigido;
 
     private int quantidadeDiasAtraso;
 
@@ -29,7 +33,9 @@ public class Conta {
 
     private LocalDate dataVencimento;
 
-    private double percentualMulta;
+    @Column(precision=15, scale=2)
+    private BigDecimal percentualMulta;
 
-    private double percentualJurosDia;
+    @Column(precision=15, scale=2)
+    private BigDecimal percentualJurosDia;
 }

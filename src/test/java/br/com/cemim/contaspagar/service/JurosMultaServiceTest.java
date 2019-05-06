@@ -53,7 +53,7 @@ public class JurosMultaServiceTest {
         int diasEmAtrasoEsperado = 1;
         double jurosAoDiaEsperado = 0.1;
         double multaEsperada = 2;
-        double valorCorrigidoEsperado = 135.37;
+        double valorCorrigidoEsperado = 135.36;
 
         double valorOriginal = 132.58;
         LocalDate dataVencimento = LocalDate.of(2019, 10, 1);
